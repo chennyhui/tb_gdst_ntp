@@ -13,10 +13,6 @@ ACCESSION=$1
 # 3. Use the variable in your pipeline
 echo "Starting pipeline for Accession: $ACCESSION"
 
-# Example: Using it to create a directory or download a file
-# mkdir -p "./data/$ACCESSION"
-# fastq-dump "$ACCESSION" --outdir "./data/$ACCESSION"
-
 prefetch "$ACCESSION"
 
 fasterq-dump --split-files "$ACCESSION"
