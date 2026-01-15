@@ -29,7 +29,6 @@ docker run --rm \
     tb-profiler profile \
     -1 "${ACCESSION}_1.fastq" \
     -2 "${ACCESSION}_2.fastq" \
-    -p "$ACCESSION" \ 
-    -t 2
+    -p "$ACCESSION" -t 2
 
 echo "Process complete for $ACCESSION."
