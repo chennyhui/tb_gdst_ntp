@@ -31,4 +31,11 @@ docker run --rm \
     -2 "${ACCESSION}_2.fastq" \
     -p "$ACCESSION" -t 2
 
+# Collate the results
+docker run --rm \
+    -v $(pwd):/data \
+    -w /data \
+    quay.io/biocontainers/tb-profiler:6.6.6--pyhdfd78af_0 \
+    tb-profiler collate
+
 echo "Process complete for $ACCESSION."
